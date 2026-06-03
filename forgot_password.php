@@ -48,8 +48,6 @@
             <p class="toggle-link"><a href="index.php">Back to Login</a></p>
         <?php endif; ?>
     </div>
-    <div class="footer">
-        &copy; <?php echo date("Y"); ?> All rights reserved | Rajneesh Chaubey
-    </div>
+
 </body>
 </html>

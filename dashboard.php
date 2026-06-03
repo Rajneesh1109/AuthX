@@ -117,9 +117,7 @@ $profile_pic = $user['profile_pic'] && file_exists("uploads/" . $user['profile_p
         </form>
     </div>
 
-    <div class="footer">
-        &copy; <?php echo date("Y"); ?> All rights reserved | Rajneesh Chaubey
-    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
