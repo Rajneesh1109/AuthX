@@ -182,6 +182,67 @@ p.subtitle {
     z-index: 10;
 }
 
+/* Hamburger Menu */
+.hamburger-menu {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.hamburger-icon {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--text-main);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 1rem;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 180px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.dropdown-menu.show {
+    display: flex;
+    animation: fadeIn 0.2s ease forwards;
+}
+
+.dropdown-menu a {
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+    font-size: 1rem;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
 /* Dashboard Specifics */
 .dashboard-container {
     max-width: 800px;

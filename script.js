@@ -21,6 +21,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Hamburger Menu Logic
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const dropdownMenu = document.getElementById('dropdown-menu');
+
+    if (hamburgerIcon && dropdownMenu) {
+        hamburgerIcon.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('show');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!dropdownMenu.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    }
+
     // Client-side validation example for Registration
     const regForm = document.getElementById('register-form');
     if (regForm) {

@@ -41,6 +41,17 @@ $profile_pic = $user['profile_pic'] && file_exists("uploads/" . $user['profile_p
     </style>
 </head>
 <body>
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburger-icon">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu">
+            <a href="dashboard.php">Dashboard</a>
+            <a href="logout.php">Logout</a>
+        </div>
+    </div>
+
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
 

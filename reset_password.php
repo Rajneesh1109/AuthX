@@ -25,6 +25,17 @@ if (!empty($token)) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" id="hamburger-icon">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu">
+            <a href="index.php">Home / Login</a>
+            <a href="forgot_password.php">Forgot Password</a>
+        </div>
+    </div>
+
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
 
