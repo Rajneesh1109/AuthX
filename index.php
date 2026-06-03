@@ -81,9 +81,10 @@ if (isset($_SESSION['user_id'])) {
             </form>
             <p class="toggle-link">Already have an account? <a href="#" id="show-login">Sign In</a></p>
         </div>
-
     </div>
-
+    <div class="footer">
+        &copy; <?php echo date("Y"); ?> All rights reserved | Rajneesh Chaubey
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

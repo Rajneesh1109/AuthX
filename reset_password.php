@@ -57,5 +57,8 @@ if (!empty($token)) {
             </form>
         <?php endif; ?>
     </div>
+    <div class="footer">
+        &copy; <?php echo date("Y"); ?> All rights reserved | Rajneesh Chaubey
+    </div>
 </body>
 </html>

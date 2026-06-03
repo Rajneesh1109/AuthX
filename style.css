@@ -171,6 +171,16 @@ p.subtitle {
     text-decoration: underline;
 }
 
+.footer {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    z-index: 10;
+}
+
 /* Dashboard Specifics */
 .dashboard-container {
     max-width: 800px;
