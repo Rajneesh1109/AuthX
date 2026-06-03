@@ -16,4 +16,24 @@ try {
 } catch (PDOException $e) {
     die("Database connection failed: " . $e->getMessage());
 }
+
+// Handle Auto-login with Remember Me Cookie
+if (!isset($_SESSION['user_id']) && isset($_COOKIE['remember_token'])) {
+    $token = $_COOKIE['remember_token'];
+    try {
+        $stmt = $pdo->prepare("SELECT id, username FROM users WHERE remember_token = ?");
+        $stmt->execute([$token]);
+        $user = $stmt->fetch();
+        
+        if ($user) {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['username'] = $user['username'];
+        } else {
+            // Invalid token, clear the cookie
+            setcookie('remember_token', '', time() - 3600, "/");
+        }
+    } catch (PDOException $e) {
+        // Silently fail auto-login on db error
+    }
+}
 ?>

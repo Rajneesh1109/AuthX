@@ -23,6 +23,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
             
+            // Handle Remember Me
+            if (isset($_POST['remember'])) {
+                $remember_token = bin2hex(random_bytes(32));
+                $stmt = $pdo->prepare("UPDATE users SET remember_token = ? WHERE id = ?");
+                $stmt->execute([$remember_token, $user['id']]);
+                // Set cookie for 30 days
+                setcookie('remember_token', $remember_token, time() + (86400 * 30), "/");
+            }
+            
             header("Location: dashboard.php");
             exit();
         } else {

@@ -47,6 +47,10 @@ if (isset($_SESSION['user_id'])) {
                     </label>
                     <input type="password" id="login-password" name="password" required autocomplete="current-password">
                 </div>
+                <div class="input-group" style="display: flex; align-items: center; margin-bottom: 1rem;">
+                    <input type="checkbox" id="remember" name="remember" style="width: auto; margin-right: 0.5rem; accent-color: var(--primary);">
+                    <label for="remember" style="margin-bottom: 0;">Remember me</label>
+                </div>
                 <button type="submit" class="btn">Sign In</button>
             </form>
             <p class="toggle-link">Don't have an account? <a href="#" id="show-register">Register here</a></p>
