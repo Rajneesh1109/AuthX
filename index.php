@@ -41,7 +41,10 @@ if (isset($_SESSION['user_id'])) {
                     <input type="email" id="login-email" name="email" required autocomplete="email">
                 </div>
                 <div class="input-group">
-                    <label for="login-password">Password</label>
+                    <label for="login-password" style="display: flex; justify-content: space-between;">
+                        Password
+                        <a href="forgot_password.php" style="color: var(--primary); text-decoration: none;">Forgot?</a>
+                    </label>
                     <input type="password" id="login-password" name="password" required autocomplete="current-password">
                 </div>
                 <button type="submit" class="btn">Sign In</button>
